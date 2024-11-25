@@ -16,5 +16,10 @@ namespace _23135_23578_Proj5
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

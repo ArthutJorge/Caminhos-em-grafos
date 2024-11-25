@@ -28,32 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabCadastro = new System.Windows.Forms.TabPage();
-            this.tabArvore = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnExibirCaminho = new System.Windows.Forms.Button();
+            this.btnExcluirCaminho = new System.Windows.Forms.Button();
+            this.btnAlterarCaminho = new System.Windows.Forms.Button();
+            this.btnIncluirCaminho = new System.Windows.Forms.Button();
+            this.btnExibirCidade = new System.Windows.Forms.Button();
+            this.btnExcluirCidade = new System.Windows.Forms.Button();
+            this.btnAlterarCidade = new System.Windows.Forms.Button();
+            this.btnIncluirCidade = new System.Windows.Forms.Button();
+            this.numDistancia = new System.Windows.Forms.NumericUpDown();
+            this.tbCidadeDestino = new System.Windows.Forms.TextBox();
+            this.numXCidade = new System.Windows.Forms.NumericUpDown();
+            this.tbNomeCidade = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabArvore = new System.Windows.Forms.TabPage();
+            this.pbCaminhos = new System.Windows.Forms.PictureBox();
+            this.numTempo = new System.Windows.Forms.NumericUpDown();
+            this.numYCidade = new System.Windows.Forms.NumericUpDown();
+            this.numCusto = new System.Windows.Forms.NumericUpDown();
+            this.dtCaminhos = new System.Windows.Forms.DataGridView();
+            this.pbArvore = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.tabCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDistancia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numXCidade)).BeginInit();
             this.tabArvore.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCaminhos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTempo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numYCidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtCaminhos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArvore)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -66,17 +82,28 @@
             this.tabControl.Location = new System.Drawing.Point(-3, 1);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(801, 446);
+            this.tabControl.Size = new System.Drawing.Size(998, 589);
             this.tabControl.TabIndex = 0;
             // 
             // tabCadastro
             // 
-            this.tabCadastro.Controls.Add(this.numericUpDown4);
-            this.tabCadastro.Controls.Add(this.numericUpDown3);
-            this.tabCadastro.Controls.Add(this.textBox2);
-            this.tabCadastro.Controls.Add(this.numericUpDown2);
-            this.tabCadastro.Controls.Add(this.numericUpDown1);
-            this.tabCadastro.Controls.Add(this.textBox1);
+            this.tabCadastro.Controls.Add(this.dtCaminhos);
+            this.tabCadastro.Controls.Add(this.numCusto);
+            this.tabCadastro.Controls.Add(this.numYCidade);
+            this.tabCadastro.Controls.Add(this.numTempo);
+            this.tabCadastro.Controls.Add(this.pbCaminhos);
+            this.tabCadastro.Controls.Add(this.btnExibirCaminho);
+            this.tabCadastro.Controls.Add(this.btnExcluirCaminho);
+            this.tabCadastro.Controls.Add(this.btnAlterarCaminho);
+            this.tabCadastro.Controls.Add(this.btnIncluirCaminho);
+            this.tabCadastro.Controls.Add(this.btnExibirCidade);
+            this.tabCadastro.Controls.Add(this.btnExcluirCidade);
+            this.tabCadastro.Controls.Add(this.btnAlterarCidade);
+            this.tabCadastro.Controls.Add(this.btnIncluirCidade);
+            this.tabCadastro.Controls.Add(this.numDistancia);
+            this.tabCadastro.Controls.Add(this.tbCidadeDestino);
+            this.tabCadastro.Controls.Add(this.numXCidade);
+            this.tabCadastro.Controls.Add(this.tbNomeCidade);
             this.tabCadastro.Controls.Add(this.label10);
             this.tabCadastro.Controls.Add(this.label9);
             this.tabCadastro.Controls.Add(this.label8);
@@ -89,171 +116,276 @@
             this.tabCadastro.Location = new System.Drawing.Point(4, 22);
             this.tabCadastro.Name = "tabCadastro";
             this.tabCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCadastro.Size = new System.Drawing.Size(793, 420);
+            this.tabCadastro.Size = new System.Drawing.Size(990, 563);
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "Cadastro";
             this.tabCadastro.UseVisualStyleBackColor = true;
             // 
-            // tabArvore
+            // btnExibirCaminho
             // 
-            this.tabArvore.Controls.Add(this.label1);
-            this.tabArvore.Location = new System.Drawing.Point(4, 22);
-            this.tabArvore.Name = "tabArvore";
-            this.tabArvore.Padding = new System.Windows.Forms.Padding(3);
-            this.tabArvore.Size = new System.Drawing.Size(793, 420);
-            this.tabArvore.TabIndex = 1;
-            this.tabArvore.Text = "Árvore";
-            this.tabArvore.UseVisualStyleBackColor = true;
+            this.btnExibirCaminho.Location = new System.Drawing.Point(258, 261);
+            this.btnExibirCaminho.Name = "btnExibirCaminho";
+            this.btnExibirCaminho.Size = new System.Drawing.Size(75, 23);
+            this.btnExibirCaminho.TabIndex = 23;
+            this.btnExibirCaminho.Text = "Exibir";
+            this.btnExibirCaminho.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // btnExcluirCaminho
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.btnExcluirCaminho.Location = new System.Drawing.Point(96, 261);
+            this.btnExcluirCaminho.Name = "btnExcluirCaminho";
+            this.btnExcluirCaminho.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirCaminho.TabIndex = 22;
+            this.btnExcluirCaminho.Text = "Excluir";
+            this.btnExcluirCaminho.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnAlterarCaminho
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Cidade";
+            this.btnAlterarCaminho.Location = new System.Drawing.Point(177, 261);
+            this.btnAlterarCaminho.Name = "btnAlterarCaminho";
+            this.btnAlterarCaminho.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarCaminho.TabIndex = 21;
+            this.btnAlterarCaminho.Text = "Alterar";
+            this.btnAlterarCaminho.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnIncluirCaminho
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nome";
+            this.btnIncluirCaminho.Location = new System.Drawing.Point(15, 261);
+            this.btnIncluirCaminho.Name = "btnIncluirCaminho";
+            this.btnIncluirCaminho.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluirCaminho.TabIndex = 20;
+            this.btnIncluirCaminho.Text = "Incluir";
+            this.btnIncluirCaminho.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // btnExibirCidade
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(376, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "X";
+            this.btnExibirCidade.Location = new System.Drawing.Point(258, 89);
+            this.btnExibirCidade.Name = "btnExibirCidade";
+            this.btnExibirCidade.Size = new System.Drawing.Size(75, 23);
+            this.btnExibirCidade.TabIndex = 18;
+            this.btnExibirCidade.Text = "Exibir";
+            this.btnExibirCidade.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnExcluirCidade
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(470, 166);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Y";
+            this.btnExcluirCidade.Location = new System.Drawing.Point(96, 89);
+            this.btnExcluirCidade.Name = "btnExcluirCidade";
+            this.btnExcluirCidade.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirCidade.TabIndex = 17;
+            this.btnExcluirCidade.Text = "Excluir";
+            this.btnExcluirCidade.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // btnAlterarCidade
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(387, 263);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Caminhos";
+            this.btnAlterarCidade.Location = new System.Drawing.Point(177, 89);
+            this.btnAlterarCidade.Name = "btnAlterarCidade";
+            this.btnAlterarCidade.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarCidade.TabIndex = 16;
+            this.btnAlterarCidade.Text = "Alterar";
+            this.btnAlterarCidade.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // btnIncluirCidade
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(498, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Cidade de destino";
+            this.btnIncluirCidade.Location = new System.Drawing.Point(15, 89);
+            this.btnIncluirCidade.Name = "btnIncluirCidade";
+            this.btnIncluirCidade.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluirCidade.TabIndex = 15;
+            this.btnIncluirCidade.Text = "Incluir";
+            this.btnIncluirCidade.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // numDistancia
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(245, 242);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Distância";
+            this.numDistancia.Location = new System.Drawing.Point(15, 235);
+            this.numDistancia.Name = "numDistancia";
+            this.numDistancia.Size = new System.Drawing.Size(136, 20);
+            this.numDistancia.TabIndex = 13;
             // 
-            // label9
+            // tbCidadeDestino
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(376, 118);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Tempo";
+            this.tbCidadeDestino.Location = new System.Drawing.Point(15, 187);
+            this.tbCidadeDestino.Name = "tbCidadeDestino";
+            this.tbCidadeDestino.Size = new System.Drawing.Size(220, 20);
+            this.tbCidadeDestino.TabIndex = 12;
+            // 
+            // numXCidade
+            // 
+            this.numXCidade.Location = new System.Drawing.Point(241, 63);
+            this.numXCidade.Name = "numXCidade";
+            this.numXCidade.Size = new System.Drawing.Size(120, 20);
+            this.numXCidade.TabIndex = 10;
+            // 
+            // tbNomeCidade
+            // 
+            this.tbNomeCidade.Location = new System.Drawing.Point(15, 62);
+            this.tbNomeCidade.Name = "tbNomeCidade";
+            this.tbNomeCidade.Size = new System.Drawing.Size(220, 20);
+            this.tbNomeCidade.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(400, 166);
+            this.label10.Location = new System.Drawing.Point(296, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 8;
             this.label10.Text = "Custo";
             // 
-            // textBox1
+            // label9
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(154, 219);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Tempo";
             // 
-            // numericUpDown1
+            // label8
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(265, 48);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 10;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 219);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Distância";
             // 
-            // numericUpDown2
+            // label7
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(436, 48);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 11;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Cidade de destino";
             // 
-            // textBox2
+            // label6
             // 
-            this.textBox2.Location = new System.Drawing.Point(265, 311);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Caminhos";
             // 
-            // numericUpDown3
+            // label5
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(516, 197);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 13;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(365, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Y";
             // 
-            // numericUpDown4
+            // label4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(516, 327);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown4.TabIndex = 14;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(238, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "X";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nome";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Cidade";
+            // 
+            // tabArvore
+            // 
+            this.tabArvore.Controls.Add(this.pbArvore);
+            this.tabArvore.Location = new System.Drawing.Point(4, 22);
+            this.tabArvore.Name = "tabArvore";
+            this.tabArvore.Padding = new System.Windows.Forms.Padding(3);
+            this.tabArvore.Size = new System.Drawing.Size(990, 563);
+            this.tabArvore.TabIndex = 1;
+            this.tabArvore.Text = "Árvore";
+            this.tabArvore.UseVisualStyleBackColor = true;
+            // 
+            // pbCaminhos
+            // 
+            this.pbCaminhos.Image = ((System.Drawing.Image)(resources.GetObject("pbCaminhos.Image")));
+            this.pbCaminhos.Location = new System.Drawing.Point(492, 14);
+            this.pbCaminhos.Name = "pbCaminhos";
+            this.pbCaminhos.Size = new System.Drawing.Size(491, 317);
+            this.pbCaminhos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCaminhos.TabIndex = 24;
+            this.pbCaminhos.TabStop = false;
+            // 
+            // numTempo
+            // 
+            this.numTempo.Location = new System.Drawing.Point(157, 235);
+            this.numTempo.Name = "numTempo";
+            this.numTempo.Size = new System.Drawing.Size(136, 20);
+            this.numTempo.TabIndex = 25;
+            // 
+            // numYCidade
+            // 
+            this.numYCidade.Location = new System.Drawing.Point(367, 62);
+            this.numYCidade.Name = "numYCidade";
+            this.numYCidade.Size = new System.Drawing.Size(120, 20);
+            this.numYCidade.TabIndex = 26;
+            // 
+            // numCusto
+            // 
+            this.numCusto.Location = new System.Drawing.Point(299, 235);
+            this.numCusto.Name = "numCusto";
+            this.numCusto.Size = new System.Drawing.Size(136, 20);
+            this.numCusto.TabIndex = 27;
+            // 
+            // dtCaminhos
+            // 
+            this.dtCaminhos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtCaminhos.Location = new System.Drawing.Point(15, 307);
+            this.dtCaminhos.Name = "dtCaminhos";
+            this.dtCaminhos.Size = new System.Drawing.Size(472, 241);
+            this.dtCaminhos.TabIndex = 28;
+            // 
+            // pbArvore
+            // 
+            this.pbArvore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbArvore.Location = new System.Drawing.Point(6, 6);
+            this.pbArvore.Name = "pbArvore";
+            this.pbArvore.Size = new System.Drawing.Size(978, 551);
+            this.pbArvore.TabIndex = 1;
+            this.pbArvore.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(997, 593);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Marte Árvores Binárias";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl.ResumeLayout(false);
             this.tabCadastro.ResumeLayout(false);
             this.tabCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDistancia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numXCidade)).EndInit();
             this.tabArvore.ResumeLayout(false);
-            this.tabArvore.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCaminhos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTempo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numYCidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCusto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtCaminhos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArvore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,13 +395,10 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabCadastro;
         private System.Windows.Forms.TabPage tabArvore;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown numDistancia;
+        private System.Windows.Forms.TextBox tbCidadeDestino;
+        private System.Windows.Forms.NumericUpDown numXCidade;
+        private System.Windows.Forms.TextBox tbNomeCidade;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -279,6 +408,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExibirCaminho;
+        private System.Windows.Forms.Button btnExcluirCaminho;
+        private System.Windows.Forms.Button btnAlterarCaminho;
+        private System.Windows.Forms.Button btnIncluirCaminho;
+        private System.Windows.Forms.Button btnExibirCidade;
+        private System.Windows.Forms.Button btnExcluirCidade;
+        private System.Windows.Forms.Button btnAlterarCidade;
+        private System.Windows.Forms.Button btnIncluirCidade;
+        private System.Windows.Forms.PictureBox pbCaminhos;
+        private System.Windows.Forms.DataGridView dtCaminhos;
+        private System.Windows.Forms.NumericUpDown numCusto;
+        private System.Windows.Forms.NumericUpDown numYCidade;
+        private System.Windows.Forms.NumericUpDown numTempo;
+        private System.Windows.Forms.PictureBox pbArvore;
     }
 }
 
