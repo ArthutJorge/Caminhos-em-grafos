@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
 
-namespace Arvores2024
 {
   public class Arvore<Dado> where Dado : IComparable<Dado>,IRegistro, new() // entidade terá construtor sem parâmetros
   {
     public class NoArvore<Tipo> : IComparable<NoArvore<Tipo>>
-                                where Tipo : IComparable<Tipo>, IRegistro, new()
+        where Tipo : IComparable<Tipo>, IRegistro, new()
     {
       Tipo info;
       public NoArvore<Tipo> esq, dir;
@@ -683,4 +682,3 @@ namespace Arvores2024
 
 
     }
-}

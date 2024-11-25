@@ -9,8 +9,9 @@ public class Cidade : IComparable<Cidade>, IRegistro
   string nomeCidade;
   double coordenadaX;
   double coordenadaY;
+  ListaSimples<Caminho> caminhos;
 
-  const int tamanhoRegistro = tamanhoNome + 2 * sizeof(double);
+    const int tamanhoRegistro = tamanhoNome + 2 * sizeof(double);
 
   public int TamanhoRegistro => tamanhoRegistro;
 
@@ -19,18 +20,21 @@ public class Cidade : IComparable<Cidade>, IRegistro
     NomeCidade = "";
     CoordenadaX = 0.0;
     CoordenadaY = 0.0;
-  }
+    Caminhos = new ListaSimples<Caminho>();
+   }
 
   public Cidade(string nomeCidade, double coordenadaX, double coordenadaY)
   {
     this.NomeCidade = "";
     this.CoordenadaX = 0.0;
     this.CoordenadaY = 0.0;
+    this.Caminhos = new ListaSimples<Caminho>();
   }
 
   public Cidade(string nomeCidade)
   {
     this.nomeCidade = nomeCidade;
+    
   }
 
   public int CompareTo(Cidade outraCidade)
@@ -63,7 +67,7 @@ public class Cidade : IComparable<Cidade>, IRegistro
 
         this.CoordenadaX = arquivo.ReadDouble();
         this.CoordenadaY = arquivo.ReadDouble();
-            }
+      }
       catch (Exception e)
       {
         MessageBox.Show(e.Message);
@@ -91,6 +95,7 @@ public class Cidade : IComparable<Cidade>, IRegistro
   }
   public double CoordenadaX { get => coordenadaX; set => coordenadaX = value; }
   public double CoordenadaY { get => coordenadaY; set => coordenadaY = value; }
+  public ListaSimples<Caminho> Caminhos { get => caminhos; set => caminhos = value; }
 
     public void LerRegistro(BinaryReader arquivo)   // sobrecarga para leitura sequencial
   {

@@ -4,44 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Polinomios
+public class NoLista<Dado> 
+    where Dado :  IComparable<Dado>, IRegistro
 {
-    public class NoLista<Dado> 
-        where Dado :  IComparable<Dado>
+    private Dado info;
+    private NoLista<Dado> prox;
+
+    public NoLista(Dado informacao, NoLista<Dado> ponteiro)
     {
-        private Dado info;
-        private NoLista<Dado> prox;
+        info = informacao;
+        prox = ponteiro;
+    }
 
-        public NoLista(Dado informacao, NoLista<Dado> ponteiro)
+    public Dado Info
+    {
+        get
         {
-            info = informacao;
-            prox = ponteiro;
+            return info;
         }
 
-        public Dado Info
+        set
         {
-            get
-            {
-                return info;
-            }
+            info = value;
+        }
+    }
 
-            set
-            {
-                info = value;
-            }
+    public NoLista<Dado> Prox
+    {
+        get
+        {
+            return prox;
         }
 
-        public NoLista<Dado> Prox
+        set
         {
-            get
-            {
-                return prox;
-            }
-
-            set
-            {
-                prox = value;
-            }
+            prox = value;
         }
     }
 }

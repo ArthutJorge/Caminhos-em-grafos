@@ -1,5 +1,4 @@
-﻿namespace _23135_23578_Proj5
-{
+﻿
     partial class Form1
     {
         /// <summary>
@@ -423,5 +422,4 @@
         private System.Windows.Forms.NumericUpDown numTempo;
         private System.Windows.Forms.PictureBox pbArvore;
     }
-}
 

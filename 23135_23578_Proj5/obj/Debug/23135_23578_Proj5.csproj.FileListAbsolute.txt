@@ -2,9 +2,9 @@ Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_2357
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.pdb
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.AssemblyReference.cache
-Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\_23135_23578_Proj5.Form1.resources
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\_23135_23578_Proj5.Properties.Resources.resources
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.GenerateResource.cache
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb
+Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\Form1.resources

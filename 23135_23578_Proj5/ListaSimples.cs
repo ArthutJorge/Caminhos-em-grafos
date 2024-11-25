@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Polinomios
-{
+
     public class ListaSimples<Dado>
-        where Dado : IComparable<Dado>
-    {
+        where Dado : IComparable<Dado>, IRegistro
+    {   
         private NoLista<Dado> primeiro;
         private NoLista<Dado> ultimo;
         protected NoLista<Dado> anterior, atual;
@@ -287,4 +286,4 @@ namespace Polinomios
             }
         }
     }
-}
+

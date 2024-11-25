@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Arvores2024
-{
   public class NoArvoreExterna<Dado> : IComparable<NoArvoreExterna<Dado>> 
                                 where Dado : IComparable<Dado>, 
                                              IRegistro, 
@@ -54,4 +52,4 @@ namespace Arvores2024
     }
 
   }
-}
+
