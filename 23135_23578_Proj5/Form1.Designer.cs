@@ -403,6 +403,7 @@
             this.pbArvore.Size = new System.Drawing.Size(978, 551);
             this.pbArvore.TabIndex = 1;
             this.pbArvore.TabStop = false;
+            this.pbArvore.Paint += new System.Windows.Forms.PaintEventHandler(this.pbArvore_Paint);
             // 
             // Form1
             // 

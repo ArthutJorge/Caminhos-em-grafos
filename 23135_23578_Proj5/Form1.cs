@@ -141,4 +141,22 @@ public partial class Form1 : Form
                 //preencher nome, x, y e listar todos os caminhos
             }*/
         }
+
+
+    private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (tabControl.SelectedTab == tabArvore) // Verifica se a aba ativa é tabArvore
+        {
+            pbArvore.Invalidate(); // Força a chamada do evento Paint do PictureBox
+        }
+    }
+
+    private void pbArvore_Paint(object sender, PaintEventArgs e)
+    {
+        if (aArvore?.Raiz != null) // Verifica se a árvore não está vazia
+        {
+            Graphics g = e.Graphics;
+            aArvore.DesenharArvore(true, pbArvore.Width/2, pbArvore.Height, g);
+        }
+    }
 }

@@ -282,7 +282,7 @@ using System.IO;
       return saida;
     }
 
-    public void DesenharArvore(int x, int y, Graphics g)
+    public void DesenharArvore(bool v, int x, int y, Graphics g)
     {
       DesenharArvore(true, this.raiz, x, y, Math.PI/2, 1, 300, g);
     }
