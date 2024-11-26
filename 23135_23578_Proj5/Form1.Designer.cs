@@ -126,12 +126,14 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(521, 362);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
+            this.label1.Size = new System.Drawing.Size(111, 25);
             this.label1.TabIndex = 29;
-            this.label1.Text = "Version: 1.0";
+            this.label1.Text = "Version: 2";
             // 
             // dtCaminhos
             // 
+            this.dtCaminhos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dtCaminhos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtCaminhos.Location = new System.Drawing.Point(15, 307);
             this.dtCaminhos.Name = "dtCaminhos";
@@ -177,6 +179,9 @@
             // 
             // pbCaminhos
             // 
+            this.pbCaminhos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCaminhos.Image = ((System.Drawing.Image)(resources.GetObject("pbCaminhos.Image")));
             this.pbCaminhos.Location = new System.Drawing.Point(492, 14);
             this.pbCaminhos.Name = "pbCaminhos";

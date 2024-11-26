@@ -73,6 +73,15 @@ public partial class Form1 : Form
                         ondeDesenhar.DrawString(cidade.nome, fonte, brush, (float)(cidade.x * pbMapa.Width), (float)(cidade.y * pbMapa.Height - 15)); // escreve o nome em cima do ponto
                     }*/
 
+        var ondeDesenhar = e.Graphics;
+        SolidBrush brush;
+        Font fonte = new Font("Tahoma", 10); // fonte e tamanho do nome da cidade
+        int radio = 4;
+        brush = new SolidBrush(Color.Black);
+        ondeDesenhar.FillEllipse(brush, (float)(0.3 * pbCaminhos.Width), (float)(0.2 * pbCaminhos.Height), radio * 2, radio * 2);
+        ondeDesenhar.DrawString("Cidade nome", fonte, brush, (float)(0.3 * pbCaminhos.Width), (float)(0.2 * pbCaminhos.Height - 15));
+
+
 
         //desenhar todas as cidades (pontos e nomes)
 
