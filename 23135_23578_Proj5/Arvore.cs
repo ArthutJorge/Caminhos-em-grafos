@@ -323,6 +323,7 @@ using System.IO;
       var origem = new FileStream(nomeArquivo, FileMode.OpenOrCreate);
       var arquivo = new BinaryReader(origem);
       int posicaoFinal = (int)origem.Length / dado.TamanhoRegistro - 1;
+      this.qtosNos = posicaoFinal + 1;
       Particionar(0, posicaoFinal, ref raiz);
       origem.Close();
       

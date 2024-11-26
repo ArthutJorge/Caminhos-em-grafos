@@ -22,18 +22,38 @@ public partial class Form1 : Form
     private void Form1_Load(object sender, EventArgs e)
     {
         aArvore = new Arvore<Cidade>();
-        string caminhoBase = AppDomain.CurrentDomain.BaseDirectory;
 
         // Caminhos relativos
-        string caminhoCidades = Path.Combine(caminhoBase, "CidadesMarte.dat");
-        string caminhoCaminhos = Path.Combine(caminhoBase, "CaminhosEntreCidadesMarte.dat");
+        string caminhoCidades = @"..\..\CidadesMarte.dat";
+        string caminhoCaminhos = @"..\..\CaminhoEntreCidadesMarte.dat";
 
+        // Ler as cidades
         aArvore.LerArquivoDeRegistros(caminhoCidades);
+
+        var origem = new FileStream(caminhoCaminhos, FileMode.OpenOrCreate);
+        var arquivo = new BinaryReader(origem);
+
+        Caminho umCaminho = new Caminho();
+        int posicaoFinal = (int)origem.Length / umCaminho.TamanhoRegistro - 1;
+
+        for (int qualRegistro = 0; qualRegistro <= posicaoFinal; qualRegistro++)
+        {
+            umCaminho = new Caminho();
+            umCaminho.LerRegistro(arquivo, qualRegistro);
+
+            // Procurar a cidade de origem na árvore
+            if (aArvore.Existe(umCaminho.CidadeOrigem))
+            {
+                // Adicionar o caminho à lista de caminhos da cidade de origem
+                aArvore.Atual.Info.Caminhos.InserirAposFim(umCaminho);
+            }
+        }
+
+        origem.Close();
     }
 
-        
 
-        private void pbCaminhos_Paint(object sender, PaintEventArgs e)
+    private void pbCaminhos_Paint(object sender, PaintEventArgs e)
         {
            /* var ondeDesenhar = e.Graphics;
             SolidBrush brush;
