@@ -30,6 +30,11 @@ public class Caminho : IComparable<Caminho>, IRegistro
         Custo = custo;
     }
 
+    public Caminho(Cidade cidadeDestino)
+    {
+        CidadeDestino = cidadeDestino;
+    }
+
     // Método de comparação para ordenar ou comparar Caminhos
     public int CompareTo(Caminho outro)
     {
@@ -37,7 +42,7 @@ public class Caminho : IComparable<Caminho>, IRegistro
             return 1;
 
         // Exemplo de comparação com base na distância
-        return this.Distancia.CompareTo(outro.Distancia);
+        return this.CidadeDestino.CompareTo(outro.CidadeDestino);
     }
 
     public void LerRegistro(BinaryReader arquivo, long qualRegistro)
