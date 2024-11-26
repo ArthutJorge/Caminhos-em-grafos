@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
 
-{
+
   public class Arvore<Dado> where Dado : IComparable<Dado>,IRegistro, new() // entidade terá construtor sem parâmetros
   {
     public class NoArvore<Tipo> : IComparable<NoArvore<Tipo>>

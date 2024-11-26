@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.IO;
-=======
-﻿using Arvores2024;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,27 +7,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> 823239cd4f417e478d25f5f2e5839773a830d89d
 using System.Windows.Forms;
 
 public partial class Form1 : Form
 {
     Arvore<Cidade> aArvore;
+    Cidade cidadeSelecionada;
 
     public Form1()
     {
-<<<<<<< HEAD
         InitializeComponent();
     }
-=======
-
-        Cidade cidadeSelecionada;
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
->>>>>>> 823239cd4f417e478d25f5f2e5839773a830d89d
 
     private void Form1_Load(object sender, EventArgs e)
     {
@@ -42,19 +28,10 @@ public partial class Form1 : Form
         string caminhoCidades = Path.Combine(caminhoBase, "CidadesMarte.dat");
         string caminhoCaminhos = Path.Combine(caminhoBase, "CaminhosEntreCidadesMarte.dat");
 
-        // Carregar o arquivo de cidades
-        if (File.Exists(caminhoCidades))
-        {
-            using (var leitor = new BinaryReader(File.OpenRead(caminhoCidades)))
-            {
-                while (leitor.BaseStream.Position < leitor.BaseStream.Length)
-                {
-                    var cidade = new Cidade();
-                    cidade.LerDados(leitor);
-                    aArvore.Inserir(cidade);
-                }
-            }
-        }
+        aArvore.LerArquivoDeRegistros(caminhoCidades);
+    }
+
+        
 
         private void pbCaminhos_Paint(object sender, PaintEventArgs e)
         {
@@ -144,5 +121,4 @@ public partial class Form1 : Form
                 //preencher nome, x, y e listar todos os caminhos
             }*/
         }
-    }
 }
