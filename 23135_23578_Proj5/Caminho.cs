@@ -10,9 +10,17 @@ public class Caminho : IComparable<Caminho>, IRegistro
     public int Tempo { get; set; }
     public int Custo { get; set; }
 
-    public int TamanhoRegistro => 2 * CidadeDestino.TamanhoRegistro + 3 * sizeof(int);
+    public int TamanhoRegistro => 2*15 + 3 * sizeof(int); // 2 * tamanho de nome cidade (15)
 
     // Construtor
+    public Caminho()
+    {
+        CidadeOrigem = new Cidade();
+        CidadeDestino = new Cidade();
+        Distancia = 0;
+        Tempo = 0;
+        Custo = 0;
+    }
     public Caminho(Cidade cidadeOrigem, Cidade cidadeDestino, int distancia, int tempo, int custo)
     {
         CidadeOrigem = cidadeOrigem;
@@ -46,8 +54,13 @@ public class Caminho : IComparable<Caminho>, IRegistro
                 long qtosBytes = qualRegistro * TamanhoRegistro;
                 arquivo.BaseStream.Seek(qtosBytes, SeekOrigin.Begin);
 
-                this.CidadeOrigem.LerRegistro(arquivo);
-                this.CidadeDestino.LerRegistro(arquivo);
+                string nomeLidoOrigem = new string(arquivo.ReadChars(15)).TrimEnd('\0');
+                string nomeLidoDestino = new string(arquivo.ReadChars(15)).TrimEnd('\0');
+                this.CidadeOrigem = new Cidade(nomeLidoOrigem);
+                this.CidadeDestino = new Cidade(nomeLidoDestino);
+
+                this.CidadeOrigem = new Cidade(nomeLidoOrigem);
+                this.CidadeDestino = new Cidade(nomeLidoDestino);
 
                 this.Distancia = arquivo.ReadInt32();
                 this.Tempo = arquivo.ReadInt32();
