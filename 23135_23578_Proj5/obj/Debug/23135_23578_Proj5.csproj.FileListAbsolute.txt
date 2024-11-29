@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe.config
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.pdb
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.AssemblyReference.cache
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\Form1.resources
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\_23135_23578_Proj5.Properties.Resources.resources
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.GenerateResource.cache
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
-C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb
-=======
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe.config
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.pdb
@@ -20,4 +8,13 @@ Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_2357
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
 Z:\Técnico\4 semestre\Estrutura de Dados\Projetos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb
->>>>>>> cc6040d7f5d71c22c41242aa59ca4d405544d68e
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe.config
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.pdb
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.AssemblyReference.cache
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\Form1.resources
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\_23135_23578_Proj5.Properties.Resources.resources
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.GenerateResource.cache
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
+C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb
