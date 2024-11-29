@@ -284,36 +284,50 @@ using System.IO;
 
     public void DesenharArvore(bool v, int x, int y, Graphics g)
     {
-      DesenharArvore(true, this.raiz, x, y, Math.PI/2, 1, 300, g);
+        DesenharArvore(true, this.raiz, x, y, Math.PI / 2, 1, 300, g);
     }
 
     private void DesenharArvore(bool primeiraVez, NoArvore<Dado> noAtual,
                                 int x, int y, double angulo, double incremento,
                                 double comprimento, Graphics g)
     {
-      int xf, yf;
-      if (noAtual != null)
-      {
-        Pen caneta = new Pen(Color.Red);
-        xf = (int) Math.Round(x + Math.Cos(angulo) * comprimento);
-        yf = (int) Math.Round(y + Math.Sin(angulo) * comprimento);
+        int xf, yf;
+        if (noAtual != null)
+        {
+            Pen caneta = new Pen(Color.Red);
+            xf = (int)Math.Round(x + Math.Cos(angulo) * comprimento);
+            yf = (int)Math.Round(y + Math.Sin(angulo) * comprimento);
 
-        if (primeiraVez)
-          yf = 25;
+            if (primeiraVez)
+                yf = 25;
 
-        g.DrawLine(caneta, x, y, xf, yf);
+            g.DrawLine(caneta, x, y, xf, yf);
 
-        DesenharArvore(false, noAtual.Esq, xf, yf, Math.PI / 2 + incremento,
-                       incremento * 0.60, comprimento * 0.8, g);
+            DesenharArvore(false, noAtual.Esq, xf, yf, Math.PI / 2 + incremento,
+                           incremento * 0.60, comprimento * 0.75, g);
 
-        DesenharArvore(false, noAtual.Dir, xf, yf, Math.PI / 2 - incremento,
-                       incremento * 0.60, comprimento * 0.8, g);
+            DesenharArvore(false, noAtual.Dir, xf, yf, Math.PI / 2 - incremento,
+                           incremento * 0.60, comprimento * 0.75, g);
 
-        SolidBrush preenchimento = new SolidBrush(Color.Blue);
-        g.FillEllipse(preenchimento, xf - 25, yf - 15, 42, 30);
-        g.DrawString(Convert.ToString(noAtual.Info.ToString()), new Font("Comic Sans", 10),
-        new SolidBrush(Color.Yellow), xf - 23, yf - 7);
-      }
+            SolidBrush preenchimento = new SolidBrush(Color.Blue);
+            // Desenhando o quadrado com as dimensões ajustadas
+            g.FillRectangle(preenchimento, xf - 45, yf - 7, 90, 45); // Ajuste de largura e altura
+
+            // Centralização do texto (nome do nó)
+            string texto = noAtual.Info.ToString();
+            Font fonte = new Font("Comic Sans", 10);
+            SizeF tamanhoTexto = g.MeasureString(texto, fonte);
+
+            float textoX = xf + 2 - (tamanhoTexto.Width / 2); // Centraliza horizontalmente
+            float textoY = yf + 9 - (tamanhoTexto.Height / 2); // Centraliza verticalmente
+
+            g.DrawString(texto, fonte, new SolidBrush(Color.White), textoX, textoY);
+
+            // Adicionando a quantidade de caminhos abaixo do nome
+            string quantidadeCaminhos = noAtual.Info.QuantosCaminhos.ToString();
+            Font fonteCaminho = new Font("Comic Sans", 8);
+            g.DrawString(quantidadeCaminhos + " Caminho(s)", fonteCaminho, new SolidBrush(Color.White), xf - 35, textoY+15);
+        }
     }
 
     public void LerArquivoDeRegistros(string nomeArquivo)

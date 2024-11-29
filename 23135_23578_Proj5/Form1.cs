@@ -198,7 +198,7 @@ public partial class Form1 : Form
         if (aArvore?.Raiz != null) // Verifica se a árvore não está vazia
         {
             Graphics g = e.Graphics;
-            aArvore.DesenharArvore(true, pbArvore.Width/2, pbArvore.Height, g);
+            aArvore.DesenharArvore(true, pbArvore.Width/2, 0, g);
         }
     }
 

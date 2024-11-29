@@ -15,7 +15,9 @@ public class Cidade : IComparable<Cidade>, IRegistro
 
   public int TamanhoRegistro => tamanhoRegistro;
 
-  public Cidade()
+  public int QuantosCaminhos => caminhos.QuantosNos;
+
+    public Cidade()
   {
     NomeCidade = "";
     CoordenadaX = 0.0;
