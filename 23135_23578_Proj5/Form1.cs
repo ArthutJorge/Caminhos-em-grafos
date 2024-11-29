@@ -55,37 +55,44 @@ public partial class Form1 : Form
 
     private void pbCaminhos_Paint(object sender, PaintEventArgs e)
     {
-        /* var ondeDesenhar = e.Graphics;
-        SolidBrush brush;
-        Font fonte = new Font("Tahoma", 10); // fonte e tamanho do nome da cidade
-        int radio = 4;
-
-        if (listaCidades != null && listaCidades.Length > 0) // se dados não for vazio
-            foreach (var lista in listaCidades) // percorre todas cidades
-                if (lista != null && lista.Count > 0)
-                    foreach (Cidade cidade in lista)
-                    {
-                        if (cidade.nome == txtNome.Text && cidade.x == (double)udX.Value && cidade.y == (double)udY.Value)
-                            brush = new SolidBrush(Color.Red); // se for a cidade pesquisada o ponto e nome ficarão vermelho
-                        else
-                            brush = new SolidBrush(Color.Black);
-                        ondeDesenhar.FillEllipse(brush, (float)(cidade.x * pbMapa.Width), (float)(cidade.y * pbMapa.Height), radio * 2, radio * 2); // desenha o ponto
-                        ondeDesenhar.DrawString(cidade.nome, fonte, brush, (float)(cidade.x * pbMapa.Width), (float)(cidade.y * pbMapa.Height - 15)); // escreve o nome em cima do ponto
-                    }*/
-
         var ondeDesenhar = e.Graphics;
         SolidBrush brush;
         Font fonte = new Font("Tahoma", 10); // fonte e tamanho do nome da cidade
         int radio = 4;
-        brush = new SolidBrush(Color.Black);
-        ondeDesenhar.FillEllipse(brush, (float)(0.3 * pbCaminhos.Width), (float)(0.2 * pbCaminhos.Height), radio * 2, radio * 2);
-        ondeDesenhar.DrawString("Cidade nome", fonte, brush, (float)(0.3 * pbCaminhos.Width), (float)(0.2 * pbCaminhos.Height - 15));
 
+        if(aArvore.QuantosNos() > 0)
+        {
+            ListaSimples<Cidade> listaCidades = aArvore.RetornarLista();
 
+            if (listaCidades != null && listaCidades.Contar() > 0)
+            {
+                NoLista<Cidade> no = listaCidades.Primeiro;
+                while (no != null)
+                {
+                    Cidade cidadeAtual = no.Info;
+                    if (cidadeSelecionada == null)
+                    {
+                        brush = new SolidBrush(Color.Black);
+                    }
+                    else
+                    {
+                        if (cidadeAtual.NomeCidade == cidadeSelecionada.NomeCidade)
+                        {
+                            brush = new SolidBrush(Color.Red);
+                        }
+                        else
+                        {
+                            brush = new SolidBrush(Color.Black);
+                        }
+                    }
+                    ondeDesenhar.FillEllipse(brush, (float)(cidadeAtual.CoordenadaX * pbCaminhos.Width), (float)(cidadeAtual.CoordenadaY * pbCaminhos.Height), radio * 2, radio * 2);
+                    ondeDesenhar.DrawString(cidadeAtual.NomeCidade, fonte, brush, (float)(cidadeAtual.CoordenadaX * pbCaminhos.Width), (float)(cidadeAtual.CoordenadaY * pbCaminhos.Height - 15));
 
-        //desenhar todas as cidades (pontos e nomes)
+                    no = no.Prox;
+                }
+            }
+        }
 
-        // para a cidade selecionada, desenhar vermelha e ligar os caminhos dela
 
     }
 
@@ -106,6 +113,7 @@ public partial class Form1 : Form
             else { MessageBox.Show("Cidade já existe!"); }
         }
         else { MessageBox.Show("Coloque um nome para a cidade!"); }
+        pbCaminhos.Invalidate();
     }
 
     private void btnExcluirCidade_Click(object sender, EventArgs e)
@@ -123,6 +131,7 @@ public partial class Form1 : Form
             }
         }
         else { MessageBox.Show("Coloque um nome para a cidade a ser excluida!"); }
+        pbCaminhos.Invalidate();
     }
 
         private void btnAlterarCidade_Click(object sender, EventArgs e)
@@ -141,6 +150,7 @@ public partial class Form1 : Form
             else { 
                 MessageBox.Show("Não existe essa cidade!");
             }
+            pbCaminhos.Invalidate();
         }
 
     private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,6 +201,8 @@ public partial class Form1 : Form
 
         }
         else { MessageBox.Show("Não existe essa cidade!"); }
+
+        pbCaminhos.Invalidate();
     }
 
     private void pbArvore_Paint(object sender, PaintEventArgs e)
@@ -228,6 +240,7 @@ public partial class Form1 : Form
             else { MessageBox.Show("Não existe essa cidade de origem!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
+        pbCaminhos.Invalidate();
     }
 
     private void btnExcluirCaminho_Click(object sender, EventArgs e)
@@ -253,7 +266,7 @@ public partial class Form1 : Form
             else { MessageBox.Show("Não existe essa cidade de origem!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
-
+        pbCaminhos.Invalidate();
     }
 
     private void btnAlterarCaminho_Click(object sender, EventArgs e)
@@ -284,6 +297,7 @@ public partial class Form1 : Form
             else { MessageBox.Show("Não existe essa cidade de origem!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
+        pbCaminhos.Invalidate();
     }
 
 }

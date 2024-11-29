@@ -74,9 +74,27 @@ using System.IO;
     public NoArvore<Dado> Atual { get => atual; set => atual = value; }
     public NoArvore<Dado> Anterior { get => antecessor; set => antecessor = value; }
     //... outros métodos e campos membros da classe
+
     public void VisitarPreOrdem()
     {
       VisitarPreOrdem(Raiz);
+    }
+
+    public ListaSimples<Dado> RetornarLista()
+    {
+        ListaSimples<Dado> lista = new ListaSimples<Dado>();
+        CriarLista(ref lista, raiz);
+        return lista;
+    }
+
+    private void CriarLista(ref ListaSimples<Dado> lista, NoArvore<Dado> dadoAtual)
+    {
+        if(dadoAtual != null)
+        {
+            lista.InserirAposFim(dadoAtual.Info);
+            CriarLista(ref lista, dadoAtual.Esq);
+            CriarLista(ref lista, dadoAtual.Dir);
+        }
     }
 
     private void VisitarPreOrdem(NoArvore<Dado> atual)
