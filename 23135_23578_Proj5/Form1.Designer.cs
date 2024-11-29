@@ -58,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabArvore = new System.Windows.Forms.TabPage();
             this.pbArvore = new System.Windows.Forms.PictureBox();
+            this.btnExibirCaminho = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtCaminhos)).BeginInit();
@@ -86,6 +87,7 @@
             // 
             // tabCadastro
             // 
+            this.tabCadastro.Controls.Add(this.btnExibirCaminho);
             this.tabCadastro.Controls.Add(this.label1);
             this.tabCadastro.Controls.Add(this.dtCaminhos);
             this.tabCadastro.Controls.Add(this.numCusto);
@@ -414,6 +416,17 @@
             this.pbArvore.TabStop = false;
             this.pbArvore.Paint += new System.Windows.Forms.PaintEventHandler(this.pbArvore_Paint);
             // 
+            // btnExibirCaminho
+            // 
+            this.btnExibirCaminho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnExibirCaminho.Location = new System.Drawing.Point(258, 261);
+            this.btnExibirCaminho.Name = "btnExibirCaminho";
+            this.btnExibirCaminho.Size = new System.Drawing.Size(75, 23);
+            this.btnExibirCaminho.TabIndex = 30;
+            this.btnExibirCaminho.Text = "Exibir";
+            this.btnExibirCaminho.UseVisualStyleBackColor = false;
+            this.btnExibirCaminho.Click += new System.EventHandler(this.btnExibirCaminho_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,5 +484,6 @@
         private System.Windows.Forms.NumericUpDown numTempo;
         private System.Windows.Forms.PictureBox pbArvore;
     private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Button btnExibirCaminho;
 }
 

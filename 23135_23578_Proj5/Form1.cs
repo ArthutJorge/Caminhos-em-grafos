@@ -1,12 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 public partial class Form1 : Form
@@ -172,37 +166,36 @@ public partial class Form1 : Form
             numXCidade.Value = (decimal)aArvore.Atual.Info.CoordenadaX;
             numYCidade.Value = (decimal)aArvore.Atual.Info.CoordenadaY;
 
-            if (dtCaminhos.Columns.Count == 0)
-            {
-                dtCaminhos.Columns.Add("Destino", "Destino");
-                dtCaminhos.Columns.Add("Distancia", "Distância");
-                dtCaminhos.Columns.Add("Tempo", "Tempo");
-                dtCaminhos.Columns.Add("Custo", "Custo");
-            }
-            dtCaminhos.Rows.Clear();
-
-            cidadeSelecionada.Caminhos.iniciarPercursoSequencial();
-            if(cidadeSelecionada.Caminhos.Primeiro != null)
-            {
-                string nomeCidade = cidadeSelecionada.Caminhos.Atual.Info.CidadeDestino.NomeCidade;   // primeiro acesso
-                int distancia = cidadeSelecionada.Caminhos.Atual.Info.Distancia;
-                int tempo = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
-                int custo = cidadeSelecionada.Caminhos.Atual.Info.Custo;
-                dtCaminhos.Rows.Add(nomeCidade, distancia, tempo, custo);
-                while (cidadeSelecionada.Caminhos.podePercorrer())
-                {
-                    nomeCidade = cidadeSelecionada.Caminhos.Atual.Info.CidadeDestino.NomeCidade;   //demais acessos
-                    distancia = cidadeSelecionada.Caminhos.Atual.Info.Distancia;
-                    tempo = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
-                    custo = cidadeSelecionada.Caminhos.Atual.Info.Custo;
-                    dtCaminhos.Rows.Add(nomeCidade, distancia, tempo, custo);
-                }
-            }
-
+            AtualizarDataGradeView();
         }
         else { MessageBox.Show("Não existe essa cidade!"); }
 
         pbCaminhos.Invalidate();
+    }
+
+    private void AtualizarDataGradeView()
+    {
+        if (dtCaminhos.Columns.Count == 0)
+        {
+            dtCaminhos.Columns.Add("Destino", "Destino");
+            dtCaminhos.Columns.Add("Distancia", "Distância");
+            dtCaminhos.Columns.Add("Tempo", "Tempo");
+            dtCaminhos.Columns.Add("Custo", "Custo");
+        }
+        dtCaminhos.Rows.Clear();
+
+        cidadeSelecionada.Caminhos.iniciarPercursoSequencial();
+        if (cidadeSelecionada.Caminhos.Primeiro != null)
+        {
+            while (cidadeSelecionada.Caminhos.podePercorrer())
+            {
+                string nomeCidade = cidadeSelecionada.Caminhos.Atual.Info.CidadeDestino.NomeCidade;   //demais acessos
+                int distancia = cidadeSelecionada.Caminhos.Atual.Info.Distancia;
+                int tempo = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
+                int custo = cidadeSelecionada.Caminhos.Atual.Info.Custo;
+                dtCaminhos.Rows.Add(nomeCidade, distancia, tempo, custo);
+            }
+        }
     }
 
     private void pbArvore_Paint(object sender, PaintEventArgs e)
@@ -298,6 +291,34 @@ public partial class Form1 : Form
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
         pbCaminhos.Invalidate();
+        AtualizarDataGradeView();
     }
 
+    private void btnExibirCaminho_Click(object sender, EventArgs e)
+    {
+        string nomeCidadeDestino = tbCidadeDestino.Text;
+        if (aArvore.Existe(cidadeSelecionada))  
+        {
+            cidadeSelecionada = aArvore.Atual.Info;
+            Cidade cidadeDestino = new Cidade(nomeCidadeDestino);
+            if (aArvore.Existe(cidadeDestino))   // se existe a cidade de destino
+            {
+                cidadeDestino = aArvore.Atual.Info;
+
+                Caminho caminho = new Caminho(cidadeDestino);  //cria o caminho para achar na lista de caminhos
+
+                if (cidadeSelecionada.Caminhos.existeDado(caminho))   // se nao existe esse caminho nessa cidade
+                {
+                    numDistancia.Value = cidadeSelecionada.Caminhos.Atual.Info.Distancia;  //obtem os valores dos atributos
+                    numCusto.Value = cidadeSelecionada.Caminhos.Atual.Info.Custo;
+                    numTempo.Value = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
+                }
+                else { MessageBox.Show("Não existe um caminho para essa cidade de destino!"); }
+            }
+            else { MessageBox.Show("Não existe essa cidade de origem!"); }
+        }
+        else { MessageBox.Show("Não existe essa cidade de origem!"); }
+        pbCaminhos.Invalidate();
+        AtualizarDataGradeView();
+    }
 }
