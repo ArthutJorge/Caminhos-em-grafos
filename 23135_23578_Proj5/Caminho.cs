@@ -12,6 +12,8 @@ public class Caminho : IComparable<Caminho>, IRegistro
 
     public int TamanhoRegistro => 2*15 + 3 * sizeof(int); // 2 * tamanho de nome cidade (15)
 
+    public int QuantosCaminhos => CidadeOrigem.QuantosCaminhos;
+
     // Construtor
     public Caminho()
     {

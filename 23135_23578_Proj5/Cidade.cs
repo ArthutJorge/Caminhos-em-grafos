@@ -26,6 +26,7 @@ public class Cidade : IComparable<Cidade>, IRegistro
         }
     }
 
+    public int QuantosCaminhos => caminhos.QuantosNos;
 
     public Cidade()
     {
@@ -34,6 +35,7 @@ public class Cidade : IComparable<Cidade>, IRegistro
         CoordenadaY = 0.0;
         Caminhos = new ListaSimples<Caminho>();
     }
+
 
     public Cidade(string nomeCidade, double coordenadaX, double coordenadaY)
     {
