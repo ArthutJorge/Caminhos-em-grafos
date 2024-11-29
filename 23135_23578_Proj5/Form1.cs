@@ -44,9 +44,11 @@ public partial class Form1 : Form
             // Procurar a cidade de origem na árvore
             if (aArvore.Existe(umCaminho.CidadeOrigem))
             {
-                //MessageBox.Show(aArvore.Atual.Info.NomeCidade);
-                // Adicionar o caminho à lista de caminhos da cidade de origem
                 aArvore.Atual.Info.Caminhos.InserirAposFim(umCaminho);
+                aArvore.Existe(umCaminho.CidadeDestino);
+                var dado = aArvore.Atual.Info;
+                umCaminho.CidadeDestino.CoordenadaX = dado.CoordenadaX;
+                umCaminho.CidadeDestino.CoordenadaY = dado.CoordenadaY;
             }
         }
 
@@ -56,45 +58,69 @@ public partial class Form1 : Form
     private void pbCaminhos_Paint(object sender, PaintEventArgs e)
     {
         var ondeDesenhar = e.Graphics;
+        int radio = 4;
         SolidBrush brush;
         Font fonte = new Font("Tahoma", 10); // fonte e tamanho do nome da cidade
-        int radio = 4;
 
-        if(aArvore.QuantosNos() > 0)
+        if (aArvore.QuantosNos() > 0)
         {
             ListaSimples<Cidade> listaCidades = aArvore.RetornarLista();
+
+            // Verifica se a cidadeSelecionada existe
+            if (cidadeSelecionada != null)
+                aArvore.Existe(cidadeSelecionada);
+
+            var ArvoreSelecionadaInfo = aArvore.Atual.Info;
 
             if (listaCidades != null && listaCidades.Contar() > 0)
             {
                 NoLista<Cidade> no = listaCidades.Primeiro;
+
+                // Desenha as cidades
                 while (no != null)
                 {
                     Cidade cidadeAtual = no.Info;
-                    if (cidadeSelecionada == null)
-                    {
-                        brush = new SolidBrush(Color.Black);
-                    }
-                    else
-                    {
-                        if (cidadeAtual.NomeCidade == cidadeSelecionada.NomeCidade)
-                        {
-                            brush = new SolidBrush(Color.Red);
-                        }
-                        else
-                        {
-                            brush = new SolidBrush(Color.Black);
-                        }
-                    }
-                    ondeDesenhar.FillEllipse(brush, (float)(cidadeAtual.CoordenadaX * pbCaminhos.Width), (float)(cidadeAtual.CoordenadaY * pbCaminhos.Height), radio * 2, radio * 2);
-                    ondeDesenhar.DrawString(cidadeAtual.NomeCidade, fonte, brush, (float)(cidadeAtual.CoordenadaX * pbCaminhos.Width), (float)(cidadeAtual.CoordenadaY * pbCaminhos.Height - 15));
+
+                    // Define a cor para a cidade selecionada ou não
+                    brush = cidadeSelecionada != null && cidadeAtual.NomeCidade == cidadeSelecionada.NomeCidade
+                            ? new SolidBrush(Color.Red) // Cidade selecionada
+                            : new SolidBrush(Color.Black); // Cidades não selecionadas
+
+                    // Desenha a cidade como um ponto
+                    float xCidade = (float)(cidadeAtual.CoordenadaX * pbCaminhos.Width);
+                    float yCidade = (float)(cidadeAtual.CoordenadaY * pbCaminhos.Height);
+                    ondeDesenhar.FillEllipse(brush, xCidade - radio, yCidade - radio, radio * 2, radio * 2);
+                    ondeDesenhar.DrawString(cidadeAtual.NomeCidade, fonte, brush, xCidade, yCidade - 15);
 
                     no = no.Prox;
                 }
+
+                // Desenha os caminhos da cidade selecionada
+                if (cidadeSelecionada != null)
+                {
+                    var caminhoAtual = ArvoreSelecionadaInfo.Caminhos.Primeiro;
+                    while (caminhoAtual != null)
+                    {
+                        Cidade cidadeDestino = caminhoAtual.Info.CidadeDestino;
+
+                        // Calcula as posições para desenhar a linha entre as cidades
+                        float xOrigem = (float)(ArvoreSelecionadaInfo.CoordenadaX * pbCaminhos.Width);
+                        float yOrigem = (float)(ArvoreSelecionadaInfo.CoordenadaY * pbCaminhos.Height);
+                        float xDestino = (float)(cidadeDestino.CoordenadaX * pbCaminhos.Width);
+                        float yDestino = (float)(cidadeDestino.CoordenadaY * pbCaminhos.Height);
+
+                        // Desenha a linha entre as cidades
+                        using (Pen caneta = new Pen(Color.Blue))
+                            ondeDesenhar.DrawLine(caneta, xOrigem, yOrigem, xDestino, yDestino);
+
+                        caminhoAtual = caminhoAtual.Prox;
+                    }
+                }
             }
         }
-
-
     }
+
+
 
     private void btnIncluirCidade_Click(object sender, EventArgs e)
     {
