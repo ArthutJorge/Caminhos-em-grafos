@@ -18,3 +18,13 @@ C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578
 C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
 C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
 C:\Users\u23135\Documents\Projeto caminhos grafos\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe.config
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.pdb
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.AssemblyReference.cache
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\Form1.resources
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\_23135_23578_Proj5.Properties.Resources.resources
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.GenerateResource.cache
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
+C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb

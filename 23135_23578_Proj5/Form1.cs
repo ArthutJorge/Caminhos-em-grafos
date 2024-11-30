@@ -7,6 +7,8 @@ public partial class Form1 : Form
 {
     Arvore<Cidade> aArvore;
     Cidade cidadeSelecionada;
+    string caminhoCidades = @"..\..\CidadesMarte.dat";
+    string caminhoCaminhos = @"..\..\CaminhoEntreCidadesMarte.dat";
 
     public Form1()
     {
@@ -16,10 +18,6 @@ public partial class Form1 : Form
     private void Form1_Load(object sender, EventArgs e)
     {
         aArvore = new Arvore<Cidade>();
-
-        // Caminhos relativos
-        string caminhoCidades = @"..\..\CidadesMarte.dat";
-        string caminhoCaminhos = @"..\..\CaminhoEntreCidadesMarte.dat";
 
         // Ler as cidades
         aArvore.LerArquivoDeRegistros(caminhoCidades);
@@ -210,16 +208,19 @@ public partial class Form1 : Form
         }
         dtCaminhos.Rows.Clear();
 
-        cidadeSelecionada.Caminhos.iniciarPercursoSequencial();
-        if (cidadeSelecionada.Caminhos.Primeiro != null)
+        if (cidadeSelecionada != null)
         {
-            while (cidadeSelecionada.Caminhos.podePercorrer())
+            cidadeSelecionada.Caminhos.iniciarPercursoSequencial();
+            if (cidadeSelecionada.Caminhos.Primeiro != null)
             {
-                string nomeCidade = cidadeSelecionada.Caminhos.Atual.Info.CidadeDestino.NomeCidade;   //demais acessos
-                int distancia = cidadeSelecionada.Caminhos.Atual.Info.Distancia;
-                int tempo = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
-                int custo = cidadeSelecionada.Caminhos.Atual.Info.Custo;
-                dtCaminhos.Rows.Add(nomeCidade, distancia, tempo, custo);
+                while (cidadeSelecionada.Caminhos.podePercorrer())
+                {
+                    string nomeCidade = cidadeSelecionada.Caminhos.Atual.Info.CidadeDestino.NomeCidade;   //demais acessos
+                    int distancia = cidadeSelecionada.Caminhos.Atual.Info.Distancia;
+                    int tempo = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
+                    int custo = cidadeSelecionada.Caminhos.Atual.Info.Custo;
+                    dtCaminhos.Rows.Add(nomeCidade, distancia, tempo, custo);
+                }
             }
         }
     }
@@ -323,7 +324,7 @@ public partial class Form1 : Form
     private void btnExibirCaminho_Click(object sender, EventArgs e)
     {
         string nomeCidadeDestino = tbCidadeDestino.Text;
-        if (aArvore.Existe(cidadeSelecionada))  
+        if (nomeCidadeDestino != "" && aArvore.Existe(cidadeSelecionada))  
         {
             cidadeSelecionada = aArvore.Atual.Info;
             Cidade cidadeDestino = new Cidade(nomeCidadeDestino);
@@ -346,5 +347,38 @@ public partial class Form1 : Form
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
         pbCaminhos.Invalidate();
         AtualizarDataGradeView();
+    }
+
+    public void FrmCaminhos_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        // Grava as cidades no arquivo de registros
+        aArvore.GravarArquivoDeRegistros(caminhoCidades);
+
+        // Abrir arquivo para gravação binária
+        using (var origem = new FileStream(caminhoCaminhos, FileMode.Create))
+        using (var arquivo = new BinaryWriter(origem))
+        {
+            // Percorrer todas as cidades na árvore
+            ListaSimples<Cidade> listaCidades = aArvore.RetornarLista();
+            if (listaCidades != null && listaCidades.QuantosNos > 0)
+            {
+                NoLista<Cidade> noCidade = listaCidades.Primeiro;
+                while (noCidade != null)
+                {
+                    Cidade cidadeAtual = noCidade.Info;
+
+                    cidadeAtual.Caminhos.iniciarPercursoSequencial();
+                    while (cidadeAtual.Caminhos.podePercorrer())
+                    {
+                        Caminho caminhoAtual = cidadeAtual.Caminhos.Atual.Info;
+
+                        // Gravar o registro do caminho no arquivo
+                        caminhoAtual.GravarRegistro(arquivo);
+                    }
+
+                    noCidade = noCidade.Prox;
+                }
+            }
+        }
     }
 }
