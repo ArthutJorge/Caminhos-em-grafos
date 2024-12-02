@@ -131,7 +131,7 @@ using System.Windows.Forms;
             // a lista não está vazia, possui nós
             // dado procurado é menor que o primeiro dado da lista:
             // portanto, dado procurado não existe
-            if (outroProcurado.CompareTo(primeiro.Info) < 0)
+           /* if (outroProcurado.CompareTo(primeiro.Info) < 0)
                 return false;
             // dado procurado é maior que o último dado da lista:
             // portanto, dado procurado não existe
@@ -140,7 +140,7 @@ using System.Windows.Forms;
                 anterior = ultimo;
                 atual = null;
                 return false;
-            }
+            }*/
             
 // caso não tenha sido definido que a chave está fora dos limites de
 // chaves da lista, vamos procurar no seu interior

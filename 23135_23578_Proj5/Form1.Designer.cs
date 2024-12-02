@@ -31,7 +31,6 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabCadastro = new System.Windows.Forms.TabPage();
             this.btnExibirCaminho = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.dtCaminhos = new System.Windows.Forms.DataGridView();
             this.numCusto = new System.Windows.Forms.NumericUpDown();
             this.numYCidade = new System.Windows.Forms.NumericUpDown();
@@ -79,17 +78,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabCadastro);
             this.tabControl.Controls.Add(this.tabArvore);
-            this.tabControl.Location = new System.Drawing.Point(-4, 1);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl.Location = new System.Drawing.Point(-3, 1);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1331, 725);
+            this.tabControl.Size = new System.Drawing.Size(998, 589);
             this.tabControl.TabIndex = 0;
             // 
             // tabCadastro
             // 
             this.tabCadastro.Controls.Add(this.btnExibirCaminho);
-            this.tabCadastro.Controls.Add(this.label1);
             this.tabCadastro.Controls.Add(this.dtCaminhos);
             this.tabCadastro.Controls.Add(this.numCusto);
             this.tabCadastro.Controls.Add(this.numYCidade);
@@ -115,11 +112,10 @@
             this.tabCadastro.Controls.Add(this.label4);
             this.tabCadastro.Controls.Add(this.label3);
             this.tabCadastro.Controls.Add(this.label2);
-            this.tabCadastro.Location = new System.Drawing.Point(4, 25);
-            this.tabCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCadastro.Location = new System.Drawing.Point(4, 22);
             this.tabCadastro.Name = "tabCadastro";
-            this.tabCadastro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabCadastro.Size = new System.Drawing.Size(1323, 696);
+            this.tabCadastro.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabCadastro.Size = new System.Drawing.Size(990, 563);
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "Cadastro";
             this.tabCadastro.UseVisualStyleBackColor = true;
@@ -127,77 +123,60 @@
             // btnExibirCaminho
             // 
             this.btnExibirCaminho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnExibirCaminho.Location = new System.Drawing.Point(344, 321);
-            this.btnExibirCaminho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExibirCaminho.Location = new System.Drawing.Point(258, 261);
             this.btnExibirCaminho.Name = "btnExibirCaminho";
-            this.btnExibirCaminho.Size = new System.Drawing.Size(100, 28);
+            this.btnExibirCaminho.Size = new System.Drawing.Size(75, 23);
             this.btnExibirCaminho.TabIndex = 30;
             this.btnExibirCaminho.Text = "Exibir";
             this.btnExibirCaminho.UseVisualStyleBackColor = false;
             this.btnExibirCaminho.Click += new System.EventHandler(this.btnExibirCaminho_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1163, 644);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 29);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Version: 3";
             // 
             // dtCaminhos
             // 
             this.dtCaminhos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtCaminhos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtCaminhos.Location = new System.Drawing.Point(20, 378);
-            this.dtCaminhos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtCaminhos.Location = new System.Drawing.Point(15, 307);
             this.dtCaminhos.Name = "dtCaminhos";
             this.dtCaminhos.RowHeadersWidth = 51;
-            this.dtCaminhos.Size = new System.Drawing.Size(629, 297);
+            this.dtCaminhos.Size = new System.Drawing.Size(472, 241);
             this.dtCaminhos.TabIndex = 28;
             // 
             // numCusto
             // 
-            this.numCusto.Location = new System.Drawing.Point(399, 289);
-            this.numCusto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numCusto.Location = new System.Drawing.Point(299, 235);
             this.numCusto.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numCusto.Name = "numCusto";
-            this.numCusto.Size = new System.Drawing.Size(181, 22);
+            this.numCusto.Size = new System.Drawing.Size(136, 20);
             this.numCusto.TabIndex = 27;
             // 
             // numYCidade
             // 
             this.numYCidade.DecimalPlaces = 5;
-            this.numYCidade.Location = new System.Drawing.Point(489, 76);
-            this.numYCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numYCidade.Location = new System.Drawing.Point(367, 62);
             this.numYCidade.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numYCidade.Name = "numYCidade";
-            this.numYCidade.Size = new System.Drawing.Size(160, 22);
+            this.numYCidade.Size = new System.Drawing.Size(120, 20);
             this.numYCidade.TabIndex = 26;
             // 
             // numTempo
             // 
-            this.numTempo.Location = new System.Drawing.Point(209, 289);
-            this.numTempo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numTempo.Location = new System.Drawing.Point(157, 235);
             this.numTempo.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numTempo.Name = "numTempo";
-            this.numTempo.Size = new System.Drawing.Size(181, 22);
+            this.numTempo.Size = new System.Drawing.Size(136, 20);
             this.numTempo.TabIndex = 25;
             // 
             // pbCaminhos
@@ -206,10 +185,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCaminhos.Image = ((System.Drawing.Image)(resources.GetObject("pbCaminhos.Image")));
-            this.pbCaminhos.Location = new System.Drawing.Point(656, 17);
-            this.pbCaminhos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbCaminhos.Location = new System.Drawing.Point(492, 14);
             this.pbCaminhos.Name = "pbCaminhos";
-            this.pbCaminhos.Size = new System.Drawing.Size(655, 390);
+            this.pbCaminhos.Size = new System.Drawing.Size(491, 317);
             this.pbCaminhos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCaminhos.TabIndex = 24;
             this.pbCaminhos.TabStop = false;
@@ -218,10 +196,9 @@
             // btnExcluirCaminho
             // 
             this.btnExcluirCaminho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExcluirCaminho.Location = new System.Drawing.Point(128, 321);
-            this.btnExcluirCaminho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluirCaminho.Location = new System.Drawing.Point(96, 261);
             this.btnExcluirCaminho.Name = "btnExcluirCaminho";
-            this.btnExcluirCaminho.Size = new System.Drawing.Size(100, 28);
+            this.btnExcluirCaminho.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirCaminho.TabIndex = 22;
             this.btnExcluirCaminho.Text = "Excluir";
             this.btnExcluirCaminho.UseVisualStyleBackColor = false;
@@ -230,10 +207,9 @@
             // btnAlterarCaminho
             // 
             this.btnAlterarCaminho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAlterarCaminho.Location = new System.Drawing.Point(236, 321);
-            this.btnAlterarCaminho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterarCaminho.Location = new System.Drawing.Point(177, 261);
             this.btnAlterarCaminho.Name = "btnAlterarCaminho";
-            this.btnAlterarCaminho.Size = new System.Drawing.Size(100, 28);
+            this.btnAlterarCaminho.Size = new System.Drawing.Size(75, 23);
             this.btnAlterarCaminho.TabIndex = 21;
             this.btnAlterarCaminho.Text = "Alterar";
             this.btnAlterarCaminho.UseVisualStyleBackColor = false;
@@ -242,10 +218,9 @@
             // btnIncluirCaminho
             // 
             this.btnIncluirCaminho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnIncluirCaminho.Location = new System.Drawing.Point(20, 321);
-            this.btnIncluirCaminho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncluirCaminho.Location = new System.Drawing.Point(15, 261);
             this.btnIncluirCaminho.Name = "btnIncluirCaminho";
-            this.btnIncluirCaminho.Size = new System.Drawing.Size(100, 28);
+            this.btnIncluirCaminho.Size = new System.Drawing.Size(75, 23);
             this.btnIncluirCaminho.TabIndex = 20;
             this.btnIncluirCaminho.Text = "Incluir";
             this.btnIncluirCaminho.UseVisualStyleBackColor = false;
@@ -254,10 +229,9 @@
             // btnExibirCidade
             // 
             this.btnExibirCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnExibirCidade.Location = new System.Drawing.Point(344, 110);
-            this.btnExibirCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExibirCidade.Location = new System.Drawing.Point(258, 89);
             this.btnExibirCidade.Name = "btnExibirCidade";
-            this.btnExibirCidade.Size = new System.Drawing.Size(100, 28);
+            this.btnExibirCidade.Size = new System.Drawing.Size(75, 23);
             this.btnExibirCidade.TabIndex = 18;
             this.btnExibirCidade.Text = "Exibir";
             this.btnExibirCidade.UseVisualStyleBackColor = false;
@@ -266,10 +240,9 @@
             // btnExcluirCidade
             // 
             this.btnExcluirCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnExcluirCidade.Location = new System.Drawing.Point(128, 110);
-            this.btnExcluirCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluirCidade.Location = new System.Drawing.Point(96, 89);
             this.btnExcluirCidade.Name = "btnExcluirCidade";
-            this.btnExcluirCidade.Size = new System.Drawing.Size(100, 28);
+            this.btnExcluirCidade.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirCidade.TabIndex = 17;
             this.btnExcluirCidade.Text = "Excluir";
             this.btnExcluirCidade.UseVisualStyleBackColor = false;
@@ -278,10 +251,9 @@
             // btnAlterarCidade
             // 
             this.btnAlterarCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAlterarCidade.Location = new System.Drawing.Point(236, 110);
-            this.btnAlterarCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterarCidade.Location = new System.Drawing.Point(177, 89);
             this.btnAlterarCidade.Name = "btnAlterarCidade";
-            this.btnAlterarCidade.Size = new System.Drawing.Size(100, 28);
+            this.btnAlterarCidade.Size = new System.Drawing.Size(75, 23);
             this.btnAlterarCidade.TabIndex = 16;
             this.btnAlterarCidade.Text = "Alterar";
             this.btnAlterarCidade.UseVisualStyleBackColor = false;
@@ -290,10 +262,9 @@
             // btnIncluirCidade
             // 
             this.btnIncluirCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnIncluirCidade.Location = new System.Drawing.Point(20, 110);
-            this.btnIncluirCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncluirCidade.Location = new System.Drawing.Point(15, 89);
             this.btnIncluirCidade.Name = "btnIncluirCidade";
-            this.btnIncluirCidade.Size = new System.Drawing.Size(100, 28);
+            this.btnIncluirCidade.Size = new System.Drawing.Size(75, 23);
             this.btnIncluirCidade.TabIndex = 15;
             this.btnIncluirCidade.Text = "Incluir";
             this.btnIncluirCidade.UseVisualStyleBackColor = false;
@@ -301,84 +272,76 @@
             // 
             // numDistancia
             // 
-            this.numDistancia.Location = new System.Drawing.Point(20, 289);
-            this.numDistancia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numDistancia.Location = new System.Drawing.Point(15, 235);
             this.numDistancia.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numDistancia.Name = "numDistancia";
-            this.numDistancia.Size = new System.Drawing.Size(181, 22);
+            this.numDistancia.Size = new System.Drawing.Size(136, 20);
             this.numDistancia.TabIndex = 13;
             // 
             // tbCidadeDestino
             // 
-            this.tbCidadeDestino.Location = new System.Drawing.Point(20, 230);
-            this.tbCidadeDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCidadeDestino.Location = new System.Drawing.Point(15, 187);
             this.tbCidadeDestino.Name = "tbCidadeDestino";
-            this.tbCidadeDestino.Size = new System.Drawing.Size(292, 22);
+            this.tbCidadeDestino.Size = new System.Drawing.Size(220, 20);
             this.tbCidadeDestino.TabIndex = 12;
             // 
             // numXCidade
             // 
             this.numXCidade.DecimalPlaces = 5;
-            this.numXCidade.Location = new System.Drawing.Point(321, 78);
-            this.numXCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numXCidade.Location = new System.Drawing.Point(241, 63);
             this.numXCidade.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numXCidade.Name = "numXCidade";
-            this.numXCidade.Size = new System.Drawing.Size(160, 22);
+            this.numXCidade.Size = new System.Drawing.Size(120, 20);
             this.numXCidade.TabIndex = 10;
             // 
             // tbNomeCidade
             // 
-            this.tbNomeCidade.Location = new System.Drawing.Point(20, 76);
-            this.tbNomeCidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNomeCidade.Location = new System.Drawing.Point(15, 62);
             this.tbNomeCidade.Name = "tbNomeCidade";
-            this.tbNomeCidade.Size = new System.Drawing.Size(292, 22);
+            this.tbNomeCidade.Size = new System.Drawing.Size(220, 20);
             this.tbNomeCidade.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(395, 270);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(296, 219);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 16);
+            this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 8;
             this.label10.Text = "Custo";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(205, 270);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(154, 219);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 7;
             this.label9.Text = "Tempo";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 270);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(12, 219);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 16);
+            this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 6;
             this.label8.Text = "Distância";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 210);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(12, 171);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 16);
+            this.label7.Size = new System.Drawing.Size(92, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Cidade de destino";
             // 
@@ -386,40 +349,36 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 174);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(11, 141);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 25);
+            this.label6.Size = new System.Drawing.Size(88, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Caminhos";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(487, 57);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(365, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 16);
+            this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Y";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(317, 57);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(238, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 16);
+            this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "X";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 57);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nome";
             // 
@@ -427,21 +386,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(11, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cidade";
             // 
             // tabArvore
             // 
             this.tabArvore.Controls.Add(this.pbArvore);
-            this.tabArvore.Location = new System.Drawing.Point(4, 25);
-            this.tabArvore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabArvore.Location = new System.Drawing.Point(4, 22);
             this.tabArvore.Name = "tabArvore";
-            this.tabArvore.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabArvore.Size = new System.Drawing.Size(1323, 696);
+            this.tabArvore.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabArvore.Size = new System.Drawing.Size(990, 563);
             this.tabArvore.TabIndex = 1;
             this.tabArvore.Text = "Árvore";
             this.tabArvore.UseVisualStyleBackColor = true;
@@ -451,21 +408,19 @@
             this.pbArvore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbArvore.Location = new System.Drawing.Point(8, 7);
-            this.pbArvore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbArvore.Location = new System.Drawing.Point(6, 6);
             this.pbArvore.Name = "pbArvore";
-            this.pbArvore.Size = new System.Drawing.Size(1304, 678);
+            this.pbArvore.Size = new System.Drawing.Size(978, 551);
             this.pbArvore.TabIndex = 1;
             this.pbArvore.TabStop = false;
             this.pbArvore.Paint += new System.Windows.Forms.PaintEventHandler(this.pbArvore_Paint);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 730);
+            this.ClientSize = new System.Drawing.Size(997, 593);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Marte Árvores Binárias";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCaminhos_FormClosing);
@@ -517,7 +472,6 @@
         private System.Windows.Forms.NumericUpDown numYCidade;
         private System.Windows.Forms.NumericUpDown numTempo;
         private System.Windows.Forms.PictureBox pbArvore;
-    private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Button btnExibirCaminho;
 }
 

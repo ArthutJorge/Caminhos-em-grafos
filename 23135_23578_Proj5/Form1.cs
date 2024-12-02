@@ -59,10 +59,18 @@ public partial class Form1 : Form
             ListaSimples<Cidade> listaCidades = aArvore.RetornarLista();
 
             // Verifica se a cidadeSelecionada existe
-            if (cidadeSelecionada != null)
-                aArvore.Existe(cidadeSelecionada);
+            Cidade ArvoreSelecionadaInfo = null;
 
-            var ArvoreSelecionadaInfo = aArvore.Atual.Info;
+            if (cidadeSelecionada != null)
+            {
+                aArvore.Existe(cidadeSelecionada);
+                ArvoreSelecionadaInfo = aArvore.Atual.Info;
+            }
+            else
+            {
+                ArvoreSelecionadaInfo = aArvore.Raiz.Info;
+            }
+                
 
             if (listaCidades != null && listaCidades.Contar() > 0)
             {
@@ -112,8 +120,6 @@ public partial class Form1 : Form
         }
     }
 
-
-
     private void btnIncluirCidade_Click(object sender, EventArgs e)
     {
         string nome = tbNomeCidade.Text;
@@ -152,24 +158,24 @@ public partial class Form1 : Form
         pbCaminhos.Invalidate();
     }
 
-        private void btnAlterarCidade_Click(object sender, EventArgs e)
+    private void btnAlterarCidade_Click(object sender, EventArgs e)
+    {
+        string nome = tbNomeCidade.Text;
+        double novoX = (double)numXCidade.Value;
+        double novoY = (double)numYCidade.Value;
+
+        Cidade cidade = new Cidade(nome);
+
+        if (aArvore.Existe(cidade))
         {
-            string nome = tbNomeCidade.Text;
-            double novoX = (double)numXCidade.Value;
-            double novoY = (double)numYCidade.Value;
-
-            Cidade cidade = new Cidade(nome);
-
-            if (aArvore.Existe(cidade))
-            {
-                aArvore.Atual.Info.CoordenadaX = novoX;
-                aArvore.Atual.Info.CoordenadaY = novoY;
-            }
-            else { 
-                MessageBox.Show("Não existe essa cidade!");
-            }
-            pbCaminhos.Invalidate();
+            aArvore.Atual.Info.CoordenadaX = novoX;
+            aArvore.Atual.Info.CoordenadaY = novoY;
         }
+        else { 
+            MessageBox.Show("Não existe essa cidade!");
+        }
+        pbCaminhos.Invalidate();
+    }
 
     private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -257,10 +263,11 @@ public partial class Form1 : Form
                 }
                 else { MessageBox.Show("Já existe um caminho para essa cidade de destino!"); }
             }
-            else { MessageBox.Show("Não existe essa cidade de origem!"); }
+            else { MessageBox.Show("Não existe essa cidade de destino!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
         pbCaminhos.Invalidate();
+        AtualizarDataGradeView();
     }
 
     private void btnExcluirCaminho_Click(object sender, EventArgs e)
@@ -283,10 +290,11 @@ public partial class Form1 : Form
                 }
                 else { MessageBox.Show("Não existe um caminho para essa cidade de destino!"); }
             }
-            else { MessageBox.Show("Não existe essa cidade de origem!"); }
+            else { MessageBox.Show("Não existe essa cidade de destino!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
         pbCaminhos.Invalidate();
+        AtualizarDataGradeView();
     }
 
     private void btnAlterarCaminho_Click(object sender, EventArgs e)
@@ -314,7 +322,7 @@ public partial class Form1 : Form
                 }
                 else { MessageBox.Show("Não existe um caminho para essa cidade de destino!"); }
             }
-            else { MessageBox.Show("Não existe essa cidade de origem!"); }
+            else { MessageBox.Show("Não existe essa cidade de destino!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
         pbCaminhos.Invalidate();
@@ -342,7 +350,7 @@ public partial class Form1 : Form
                 }
                 else { MessageBox.Show("Não existe um caminho para essa cidade de destino!"); }
             }
-            else { MessageBox.Show("Não existe essa cidade de origem!"); }
+            else { MessageBox.Show("Não existe essa cidade de destino!"); }
         }
         else { MessageBox.Show("Não existe essa cidade de origem!"); }
         pbCaminhos.Invalidate();
@@ -381,4 +389,6 @@ public partial class Form1 : Form
             }
         }
     }
+
+
 }

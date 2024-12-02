@@ -108,27 +108,27 @@ public class Cidade : IComparable<Cidade>, IRegistro
   public ListaSimples<Caminho> Caminhos { get => caminhos; set => caminhos = value; }
 
     public void LerRegistro(BinaryReader arquivo)   // sobrecarga para leitura sequencial
-  {
-    if (arquivo != null)  // arquivo instanciado e aberto
     {
-      try
-      {
-        char[] umNome = new char[tamanhoNome];  // vetor de char para guardar o nome lido
-        umNome = arquivo.ReadChars(tamanhoNome);
-        string nomeLido = "";
+        if (arquivo != null)  // arquivo instanciado e aberto
+        {
+            try
+            {
+                char[] umNome = new char[tamanhoNome];  // vetor de char para guardar o nome lido
+                umNome = arquivo.ReadChars(tamanhoNome);
+                string nomeLido = "";
 
-        for (int i = 0; i < tamanhoNome; i++) // percorre o vetor de char 
-            nomeLido += umNome[i];              // e concatena cada caracter na string nomeLido
+                for (int i = 0; i < tamanhoNome; i++) // percorre o vetor de char 
+                    nomeLido += umNome[i];              // e concatena cada caracter na string nomeLido
 
-        NomeCidade = nomeLido;      // atribui a string nomeLido para o atributo nome
+                NomeCidade = nomeLido;      // atribui a string nomeLido para o atributo nome
 
-        CoordenadaX = arquivo.ReadDouble();
-        CoordenadaY = arquivo.ReadDouble();
-      }
-      catch (Exception e)
-      {
-        MessageBox.Show(e.Message);
-      }
+                CoordenadaX = arquivo.ReadDouble();
+                CoordenadaY = arquivo.ReadDouble();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
     }
-  }
 }

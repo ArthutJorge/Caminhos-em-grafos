@@ -28,3 +28,13 @@ C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_2
 C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
 C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
 C:\Users\arthu\OneDrive\Área de Trabalho\Projetos\C#\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe.config
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.exe
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\bin\Debug\23135_23578_Proj5.pdb
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.AssemblyReference.cache
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\Form1.resources
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\_23135_23578_Proj5.Properties.Resources.resources
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.GenerateResource.cache
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.csproj.CoreCompileInputs.cache
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.exe
+C:\Users\ionma\Documents\projeto chico caminhos em marte 2024\Caminhos-em-grafos\23135_23578_Proj5\obj\Debug\23135_23578_Proj5.pdb

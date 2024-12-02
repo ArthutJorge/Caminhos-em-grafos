@@ -61,9 +61,6 @@ public class Caminho : IComparable<Caminho>, IRegistro
                 this.CidadeOrigem = new Cidade(nomeLidoOrigem);
                 this.CidadeDestino = new Cidade(nomeLidoDestino);
 
-                this.CidadeOrigem = new Cidade(nomeLidoOrigem);
-                this.CidadeDestino = new Cidade(nomeLidoDestino);
-
                 this.Distancia = arquivo.ReadInt32();
                 this.Tempo = arquivo.ReadInt32();
                 this.Custo = arquivo.ReadInt32();
