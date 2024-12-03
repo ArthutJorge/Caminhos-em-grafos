@@ -7,6 +7,7 @@ public partial class Form1 : Form
 {
     Arvore<Cidade> aArvore;
     Cidade cidadeSelecionada;
+    Caminho caminhoSelecionado;
     string caminhoCidades = @"..\..\CidadesMarte.dat";
     string caminhoCaminhos = @"..\..\CaminhoEntreCidadesMarte.dat";
 
@@ -18,8 +19,6 @@ public partial class Form1 : Form
     private void Form1_Load(object sender, EventArgs e)
     {
         aArvore = new Arvore<Cidade>();
-
-        // Ler as cidades
         aArvore.LerArquivoDeRegistros(caminhoCidades);
 
         var origem = new FileStream(caminhoCaminhos, FileMode.OpenOrCreate);
@@ -33,7 +32,7 @@ public partial class Form1 : Form
             umCaminho = new Caminho();
             umCaminho.LerRegistro(arquivo, qualRegistro); 
 
-            // Procurar a cidade de origem na árvore
+            // procuraa a cidade de origem na árvore
             if (aArvore.Existe(umCaminho.CidadeOrigem))
             {
                 aArvore.Atual.Info.Caminhos.inserirEmOrdem(umCaminho);
@@ -52,13 +51,13 @@ public partial class Form1 : Form
         var ondeDesenhar = e.Graphics;
         int radio = 4;
         SolidBrush brush;
-        Font fonte = new Font("Tahoma", 10); // fonte e tamanho do nome da cidade
+        Font fonte = new Font("Tahoma", 10); 
 
         if (aArvore.QuantosNos() > 0)
         {
             ListaSimples<Cidade> listaCidades = aArvore.RetornarLista();
 
-            // Verifica se a cidadeSelecionada existe
+            // verifica se a cidadeSelecionada existe
             Cidade ArvoreSelecionadaInfo = null;
 
             if (cidadeSelecionada != null)
@@ -67,9 +66,7 @@ public partial class Form1 : Form
                 ArvoreSelecionadaInfo = aArvore.Atual.Info;
             }
             else
-            {
                 ArvoreSelecionadaInfo = aArvore.Raiz.Info;
-            }
                 
 
             if (listaCidades != null && listaCidades.Contar() > 0)
@@ -81,7 +78,6 @@ public partial class Form1 : Form
                 {
                     Cidade cidadeAtual = no.Info;
 
-                    // Define a cor para a cidade selecionada ou não
                     brush = cidadeSelecionada != null && cidadeAtual.NomeCidade == cidadeSelecionada.NomeCidade
                             ? new SolidBrush(Color.Red) // Cidade selecionada
                             : new SolidBrush(Color.Black); // Cidades não selecionadas
@@ -109,13 +105,21 @@ public partial class Form1 : Form
                         float xDestino = (float)(cidadeDestino.CoordenadaX * pbCaminhos.Width);
                         float yDestino = (float)(cidadeDestino.CoordenadaY * pbCaminhos.Height);
 
-                        // Desenha a linha entre as cidades
-                        using (Pen caneta = new Pen(Color.Blue))
+                        // Determina a cor da linha com base no caminho selecionado
+                        Pen caneta;
+                        if (caminhoSelecionado != null && caminhoAtual.Info.CidadeDestino.CompareTo(caminhoSelecionado.CidadeDestino) == 0)
+                            caneta = new Pen(Color.Red, 2); // destaca caminho selecionado
+                        else
+                            caneta = new Pen(Color.Blue); 
+
+                        using (caneta)
                             ondeDesenhar.DrawLine(caneta, xOrigem, yOrigem, xDestino, yDestino);
 
                         caminhoAtual = caminhoAtual.Prox;
                     }
                 }
+                caminhoSelecionado = null;
+
             }
         }
     }
@@ -164,9 +168,7 @@ public partial class Form1 : Form
         if(atual != null)
         {
             if (atual.Info.Caminhos.existeDado(new Caminho(cidadeExcluida)))
-            {
                 atual.Info.Caminhos.removerDado(new Caminho(cidadeExcluida));
-            }
             ExcluirCaminhosDaCidadeExcluida(atual.Esq, cidadeExcluida);
             ExcluirCaminhosDaCidadeExcluida(atual.Dir, cidadeExcluida);
         }
@@ -362,6 +364,7 @@ public partial class Form1 : Form
 
                 if (cidadeSelecionada.Caminhos.existeDado(caminho))   // se nao existe esse caminho nessa cidade
                 {
+                    caminhoSelecionado = caminho;
                     numDistancia.Value = cidadeSelecionada.Caminhos.Atual.Info.Distancia;  //obtem os valores dos atributos
                     numCusto.Value = cidadeSelecionada.Caminhos.Atual.Info.Custo;
                     numTempo.Value = cidadeSelecionada.Caminhos.Atual.Info.Tempo;
@@ -377,14 +380,13 @@ public partial class Form1 : Form
 
     public void FrmCaminhos_FormClosing(object sender, FormClosingEventArgs e)
     {
-        // Grava as cidades no arquivo de registros
         aArvore.GravarArquivoDeRegistros(caminhoCidades);
 
-        // Abrir arquivo para gravação binária
+        // Abre arquivo para gravação binária
         using (var origem = new FileStream(caminhoCaminhos, FileMode.Create))
         using (var arquivo = new BinaryWriter(origem))
         {
-            // Percorrer todas as cidades na árvore
+            // Percorre todas as cidades na árvore
             ListaSimples<Cidade> listaCidades = aArvore.RetornarLista();
             if (listaCidades != null && listaCidades.QuantosNos > 0)
             {
@@ -397,8 +399,6 @@ public partial class Form1 : Form
                     while (cidadeAtual.Caminhos.podePercorrer())
                     {
                         Caminho caminhoAtual = cidadeAtual.Caminhos.Atual.Info;
-
-                        // Gravar o registro do caminho no arquivo
                         caminhoAtual.GravarRegistro(arquivo);
                     }
 
@@ -409,12 +409,10 @@ public partial class Form1 : Form
         string jsonCidades = GerarJsonCidades();
         string jsonCaminhos = GerarJsonCaminhos();
 
-        // Salvando JSONs nos arquivos
         File.WriteAllText(@"..\..\cidades.json", jsonCidades);
         File.WriteAllText(@"..\..\caminhos.json", jsonCaminhos);
     }
 
-    // Gera JSON das cidades a partir da árvore
     private string GerarJsonCidades()
     {
         var cidades = aArvore.RetornarLista();
@@ -426,11 +424,11 @@ public partial class Form1 : Form
             Cidade cidade = no.Info;
             json += "  {\n";
             json += $"    \"nome\": \"{cidade.NomeCidade}\",\n";
-            json += $"    \"x\": {cidade.CoordenadaX.ToString(System.Globalization.CultureInfo.InvariantCulture)},\n";
+            json += $"    \"x\": {cidade.CoordenadaX.ToString(System.Globalization.CultureInfo.InvariantCulture)},\n"; // transforma as vírgulas em ponto
             json += $"    \"y\": {cidade.CoordenadaY.ToString(System.Globalization.CultureInfo.InvariantCulture)}\n";
             json += "  }";
 
-            if (no.Prox != null) // Adiciona vírgula apenas se não for o último
+            if (no.Prox != null) // adiciona vírgula se não for o último
                 json += ",";
             json += "\n";
             no = no.Prox;
@@ -439,7 +437,6 @@ public partial class Form1 : Form
         return json;
     }
 
-    // Gera JSON dos caminhos percorrendo cada cidade
     private string GerarJsonCaminhos()
     {
         var cidades = aArvore.RetornarLista();
@@ -463,7 +460,7 @@ public partial class Form1 : Form
                 json += $"    \"custo\": {caminho.Custo.ToString(System.Globalization.CultureInfo.InvariantCulture)}\n";
                 json += "  }";
 
-                if (caminhoAtual.Prox != null || noCidade.Prox != null) // Adiciona vírgula apenas se não for o último
+                if (caminhoAtual.Prox != null || noCidade.Prox != null) // adiciona vírgula se não for o último
                     json += ",";
                 json += "\n";
 

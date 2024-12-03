@@ -94,6 +94,7 @@ using System.Windows.Forms;
                 ultimo = novoNo;
 
             primeiro = novoNo;
+            quantosNos++;
         }
 
         public void InserirAposFim(Dado novoDado)
@@ -199,8 +200,6 @@ using System.Windows.Forms;
                 return true;  // significa que incluiu
             }
             return false;   // significa que não incluiu
-
-            //throw new Exception("Aluno já cadastrado!");
         }
 
         public bool removerDado(Dado aExcluir)
