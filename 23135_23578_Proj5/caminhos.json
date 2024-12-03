@@ -14,13 +14,6 @@
     "custo": 60
   },
   {
-    "origem": "Burroughs      ",
-    "destino": "Lowell         ",
-    "distancia": 3980,
-    "tempo": 20,
-    "custo": 120
-  },
-  {
     "origem": "Arrakeen       ",
     "destino": "Gondor         ",
     "distancia": 3500,
@@ -78,17 +71,31 @@
   },
   {
     "origem": "Dumont         ",
+    "destino": "Acheron        ",
+    "distancia": 0,
+    "tempo": 0,
+    "custo": 0
+  },
+  {
+    "origem": "Dumont         ",
     "destino": "Burroughs      ",
     "distancia": 3800,
     "tempo": 18,
     "custo": 95
   },
   {
-    "origem": "Gondor         ",
-    "destino": "Lowell         ",
-    "distancia": 2000,
-    "tempo": 16,
-    "custo": 80
+    "origem": "Dumont         ",
+    "destino": "Moria          ",
+    "distancia": 4,
+    "tempo": 2,
+    "custo": 4
+  },
+  {
+    "origem": "Dumont         ",
+    "destino": "Senzeni Na     ",
+    "distancia": 4,
+    "tempo": 2,
+    "custo": 4
   },
   {
     "origem": "Gondor         ",

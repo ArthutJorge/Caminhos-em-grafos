@@ -152,10 +152,24 @@ public partial class Form1 : Form
             {
                 cidadeSelecionada = null;
                 aArvore.ExcluirRecursivo(cidadeAExcluir);
+                ExcluirCaminhosDaCidadeExcluida(aArvore.Raiz, cidadeAExcluir);
             }
         }
         else { MessageBox.Show("Coloque um nome para a cidade a ser excluida!"); }
         pbCaminhos.Invalidate();
+    }
+
+    private void ExcluirCaminhosDaCidadeExcluida(Arvore<Cidade>.NoArvore<Cidade> atual, Cidade cidadeExcluida)
+    {
+        if(atual != null)
+        {
+            if (atual.Info.Caminhos.existeDado(new Caminho(cidadeExcluida)))
+            {
+                atual.Info.Caminhos.removerDado(new Caminho(cidadeExcluida));
+            }
+            ExcluirCaminhosDaCidadeExcluida(atual.Esq, cidadeExcluida);
+            ExcluirCaminhosDaCidadeExcluida(atual.Dir, cidadeExcluida);
+        }
     }
 
     private void btnAlterarCidade_Click(object sender, EventArgs e)
@@ -253,15 +267,19 @@ public partial class Form1 : Form
             Cidade cidadeDestino = new Cidade(nomeCidadeDestino);
             if (aArvore.Existe(cidadeDestino))   // se existe a cidade de destino
             {
-                cidadeDestino = aArvore.Atual.Info;
-
-                Caminho caminhoASerAdicionado = new Caminho(cidadeSelecionada, cidadeDestino, distancia, tempo, custo);  //cria o caminho
-
-                if (!cidadeSelecionada.Caminhos.existeDado(caminhoASerAdicionado))   // se nao existe esse caminho nessa cidade
+                if (!cidadeDestino.NomeCidade.Equals(cidadeSelecionada.NomeCidade))
                 {
-                    cidadeSelecionada.Caminhos.inserirEmOrdem(caminhoASerAdicionado);   // adiciona caminho nessa cidade
+                    cidadeDestino = aArvore.Atual.Info;
+
+                    Caminho caminhoASerAdicionado = new Caminho(cidadeSelecionada, cidadeDestino, distancia, tempo, custo);  //cria o caminho
+
+                    if (!cidadeSelecionada.Caminhos.existeDado(caminhoASerAdicionado))   // se nao existe esse caminho nessa cidade
+                    {
+                        cidadeSelecionada.Caminhos.inserirEmOrdem(caminhoASerAdicionado);   // adiciona caminho nessa cidade
+                    }
+                    else { MessageBox.Show("Já existe um caminho para essa cidade de destino!"); }
                 }
-                else { MessageBox.Show("Já existe um caminho para essa cidade de destino!"); }
+                else { MessageBox.Show("Escolha uma cidade sem ser essa!"); }
             }
             else { MessageBox.Show("Não existe essa cidade de destino!"); }
         }
@@ -457,4 +475,5 @@ public partial class Form1 : Form
         json += "]";
         return json;
     }
+
 }

@@ -1,26 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\",
+  "WorkspaceRootPath": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\arthu\\onedrive\\\u00E1rea de trabalho\\projetos\\c#\\caminhos-em-grafos\\23135_23578_proj5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\caminho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\caminho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:caminho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\listasimples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\listasimples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:listasimples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\filalista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:filalista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\noarvoreexterna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:noarvoreexterna.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\arvore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:arvore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\nofila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:nofila.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\nolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:nolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|c:\\users\\ionma\\documents\\projeto chico caminhos em marte 2024\\caminhos-em-grafos\\23135_23578_proj5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C7C5BE7-5BEC-403A-85DD-6AC60120A35B}|23135_23578_Proj5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,26 +86,104 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Arvore.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Arvore.cs",
+              "RelativeDocumentMoniker": "Arvore.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Arvore.cs",
+              "RelativeToolTip": "Arvore.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:02:49.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FilaLista.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\FilaLista.cs",
+              "RelativeDocumentMoniker": "FilaLista.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\FilaLista.cs",
+              "RelativeToolTip": "FilaLista.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:02:46.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NoArvoreExterna.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\NoArvoreExterna.cs",
+              "RelativeDocumentMoniker": "NoArvoreExterna.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\NoArvoreExterna.cs",
+              "RelativeToolTip": "NoArvoreExterna.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:02:43.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NoFila.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\NoFila.cs",
+              "RelativeDocumentMoniker": "NoFila.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\NoFila.cs",
+              "RelativeToolTip": "NoFila.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:02:42.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NoLista.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\NoLista.cs",
+              "RelativeDocumentMoniker": "NoLista.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\NoLista.cs",
+              "RelativeToolTip": "NoLista.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:02:42.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:02:41.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Caminho.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Caminho.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Caminho.cs",
               "RelativeDocumentMoniker": "Caminho.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Caminho.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Caminho.cs",
               "RelativeToolTip": "Caminho.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
+              "ViewState": "AQIAABQAAAAAAAAAAAAuwC0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T23:56:29.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ListaSimples.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\ListaSimples.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\ListaSimples.cs",
               "RelativeDocumentMoniker": "ListaSimples.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\ListaSimples.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\ListaSimples.cs",
               "RelativeToolTip": "ListaSimples.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAqwLsAAAAJAAAAAAAAAA==",
+              "ViewState": "AQIAAG4AAAAAAAAAAAA7wAgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T23:43:38.56Z",
               "EditorCaption": ""
@@ -90,38 +192,39 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAALYBAAAAAAAAAAAAAMoBAAAFAAAAAAAAAA==",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAAAKEAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T18:44:13.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Cidade.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Cidade.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Cidade.cs",
               "RelativeDocumentMoniker": "Cidade.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Cidade.cs",
+              "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Cidade.cs",
               "RelativeToolTip": "Cidade.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAFAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T23:37:50.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\\u00C1rea de Trabalho\\Projetos\\C#\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\ionma\\Documents\\projeto chico caminhos em marte 2024\\Caminhos-em-grafos\\23135_23578_Proj5\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T18:44:16.123Z"
+              "WhenOpened": "2024-11-30T18:44:16.123Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

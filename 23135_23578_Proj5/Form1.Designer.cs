@@ -114,7 +114,7 @@
             this.tabCadastro.Controls.Add(this.label2);
             this.tabCadastro.Location = new System.Drawing.Point(4, 22);
             this.tabCadastro.Name = "tabCadastro";
-            this.tabCadastro.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabCadastro.Padding = new System.Windows.Forms.Padding(3);
             this.tabCadastro.Size = new System.Drawing.Size(990, 563);
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "Cadastro";
@@ -397,7 +397,7 @@
             this.tabArvore.Controls.Add(this.pbArvore);
             this.tabArvore.Location = new System.Drawing.Point(4, 22);
             this.tabArvore.Name = "tabArvore";
-            this.tabArvore.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabArvore.Padding = new System.Windows.Forms.Padding(3);
             this.tabArvore.Size = new System.Drawing.Size(990, 563);
             this.tabArvore.TabIndex = 1;
             this.tabArvore.Text = "Árvore";
