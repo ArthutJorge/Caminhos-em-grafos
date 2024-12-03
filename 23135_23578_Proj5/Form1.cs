@@ -36,7 +36,7 @@ public partial class Form1 : Form
             // Procurar a cidade de origem na árvore
             if (aArvore.Existe(umCaminho.CidadeOrigem))
             {
-                aArvore.Atual.Info.Caminhos.InserirAposFim(umCaminho);
+                aArvore.Atual.Info.Caminhos.inserirEmOrdem(umCaminho);
                 aArvore.Existe(umCaminho.CidadeDestino);
                 var dado = aArvore.Atual.Info;
                 umCaminho.CidadeDestino.CoordenadaX = dado.CoordenadaX;
@@ -259,7 +259,7 @@ public partial class Form1 : Form
 
                 if (!cidadeSelecionada.Caminhos.existeDado(caminhoASerAdicionado))   // se nao existe esse caminho nessa cidade
                 {
-                    cidadeSelecionada.Caminhos.InserirAposFim(caminhoASerAdicionado);   // adiciona caminho nessa cidade
+                    cidadeSelecionada.Caminhos.inserirEmOrdem(caminhoASerAdicionado);   // adiciona caminho nessa cidade
                 }
                 else { MessageBox.Show("Já existe um caminho para essa cidade de destino!"); }
             }
