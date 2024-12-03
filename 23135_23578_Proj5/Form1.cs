@@ -388,7 +388,73 @@ public partial class Form1 : Form
                 }
             }
         }
+        string jsonCidades = GerarJsonCidades();
+        string jsonCaminhos = GerarJsonCaminhos();
+
+        // Salvando JSONs nos arquivos
+        File.WriteAllText(@"..\..\cidades.json", jsonCidades);
+        File.WriteAllText(@"..\..\caminhos.json", jsonCaminhos);
     }
 
+    // Gera JSON das cidades a partir da árvore
+    private string GerarJsonCidades()
+    {
+        var cidades = aArvore.RetornarLista();
+        string json = "[\n";
+        NoLista<Cidade> no = cidades.Primeiro;
 
+        while (no != null)
+        {
+            Cidade cidade = no.Info;
+            json += "  {\n";
+            json += $"    \"nome\": \"{cidade.NomeCidade}\",\n";
+            json += $"    \"x\": {cidade.CoordenadaX.ToString(System.Globalization.CultureInfo.InvariantCulture)},\n";
+            json += $"    \"y\": {cidade.CoordenadaY.ToString(System.Globalization.CultureInfo.InvariantCulture)}\n";
+            json += "  }";
+
+            if (no.Prox != null) // Adiciona vírgula apenas se não for o último
+                json += ",";
+            json += "\n";
+            no = no.Prox;
+        }
+        json += "]";
+        return json;
+    }
+
+    // Gera JSON dos caminhos percorrendo cada cidade
+    private string GerarJsonCaminhos()
+    {
+        var cidades = aArvore.RetornarLista();
+        string json = "[\n";
+        NoLista<Cidade> noCidade = cidades.Primeiro;
+
+        while (noCidade != null)
+        {
+            Cidade cidadeAtual = noCidade.Info;
+
+            var caminhoAtual = cidadeAtual.Caminhos.Primeiro;
+            while (caminhoAtual != null)
+            {
+                Caminho caminho = caminhoAtual.Info;
+
+                json += "  {\n";
+                json += $"    \"origem\": \"{caminho.CidadeOrigem.NomeCidade}\",\n";
+                json += $"    \"destino\": \"{caminho.CidadeDestino.NomeCidade}\",\n";
+                json += $"    \"distancia\": {caminho.Distancia.ToString(System.Globalization.CultureInfo.InvariantCulture)},\n";
+                json += $"    \"tempo\": {caminho.Tempo.ToString(System.Globalization.CultureInfo.InvariantCulture)},\n";
+                json += $"    \"custo\": {caminho.Custo.ToString(System.Globalization.CultureInfo.InvariantCulture)}\n";
+                json += "  }";
+
+                if (caminhoAtual.Prox != null || noCidade.Prox != null) // Adiciona vírgula apenas se não for o último
+                    json += ",";
+                json += "\n";
+
+                caminhoAtual = caminhoAtual.Prox;
+            }
+
+            noCidade = noCidade.Prox;
+        }
+        json += "]";
+        return json;
+    }
 }
